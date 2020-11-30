@@ -1,0 +1,23 @@
+.links-title {
+  margin: 0.5rem auto;
+  text-align: center;
+
+  color: #fcf1e7;
+}
+.links-container {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 6.25rem;
+  padding-bottom: 3.75rem;
+  position: relative;
+}
+
+.link-card {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: RGBA(252, 241, 231, 0.9);
+  margin: 0.3rem;
+  font-size: 24px;
+  color: #1f2044;
+  text-align: center;
+}
