@@ -15,9 +15,14 @@ firebase.analytics();
 // Initialize Cloud Firestore through Firebase
 
 let db = firebase.firestore();
+const btn = $("#btn");
+btn.click((event) => {
+  $("#myToast").toast("show");
 
-$("#btn").click((event) => {
-  $("#btn").prop("disable", true);
+  btn.prop("disable", true);
+  btn.html(`<div class="spinner-border spinner-border-sm" role="status">
+  <span class="sr-only">Loading...</span>
+  </div>`);
   event.preventDefault();
   const link = $("#link").val();
   const title = $("#title").val();
@@ -31,5 +36,7 @@ $("#btn").click((event) => {
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
     });
-  $("#btn").prop("disable", false);
+  $(".toast").toast("show");
+  btn.prop("disable", false);
+  btn.html("Submit");
 });
